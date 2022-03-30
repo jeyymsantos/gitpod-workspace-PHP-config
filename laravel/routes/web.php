@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route for View
+Route::get('/contactview', 'App\Http\Controllers\Contact\ContactControllerUI@viewform');
+
+// Route for Getting the Data
+Route::get('/contactview', 'App\Http\Controllers\Contact\ContactControllerUI@index');
