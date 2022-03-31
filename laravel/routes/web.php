@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Contact\ContactControllerUI;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +18,16 @@ Route::get('/', function () {
 });
 
 // Route for View
-Route::get('/contactview', 'App\Http\Controllers\Contact\ContactControllerUI@viewform');
+Route::get('/contactview', [ContactControllerUI::class, 'viewform']);
 
 // Route for Getting the Data
-Route::get('/contactview', 'App\Http\Controllers\Contact\ContactControllerUI@index');
+Route::get('/contactview', [ContactControllerUI::class, 'index']);
+
+// Route for AddContact
+Route::get('/addContact', [ContactControllerUI::class, 'contactform']);
+
+// Route for Saving Data
+Route::post('/add_data', [ContactControllerUI::class, 'contactSave']);
+
+// Route to the Edit View
+Route::get('click_edit/{id}', [ContactControllerUI::class, 'contactEdit']);
