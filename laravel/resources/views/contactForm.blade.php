@@ -17,7 +17,7 @@
     </div>
     @endif
     <div class="container">
-        <a href="/contactview" class="btn btn-primary mt-4">Back</a>
+        <a href="/" class="btn btn-primary mt-4">Back</a>
         <h2>Users Contact</h2>
         <form action="/add_data" method="post" class="text-align-right">
             {{ csrf_field()}}

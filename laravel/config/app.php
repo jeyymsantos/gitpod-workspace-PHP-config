@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://8000-jeyymsantos-gitpodworksp-08y9fr0dfyt.ws-eu38.gitpod.io/'),
 
     'asset_url' => env('ASSET_URL', null),
 

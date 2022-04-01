@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 // Route for View
-Route::get('/contactview', [ContactControllerUI::class, 'viewform']);
+Route::get('/', [ContactControllerUI::class, 'viewform']);
 
 // Route for Getting the Data (changed to make it the landing page)
 Route::get('/', [ContactControllerUI::class, 'index']);
@@ -31,3 +31,9 @@ Route::post('/add_data', [ContactControllerUI::class, 'contactSave']);
 
 // Route to the Edit View
 Route::get('click_edit/{id}', [ContactControllerUI::class, 'contactEdit']);
+
+// Route to Update Data
+Route::post('/update/{id}', [ContactControllerUI::class, 'contactUpdate']);
+
+// Route to Delete Data
+Route::get('/click_delete/{id}', [ContactControllerUI::class, 'contactDelete']);

@@ -30,6 +30,12 @@ class ContactControllerAPI extends Controller
         return response()->json($contact, 200);
     }
 
+    // public function contactUpdate(Request $request, $id){
+    //     $contact->Contact::find($id);
+    //     $contact->update($request->all());
+    //     return response()->json($contact, 200);
+    // }
+
     // DELETE a data
     public function contactDelete(Request $request, ContactModel $contact){
         $contact->delete();

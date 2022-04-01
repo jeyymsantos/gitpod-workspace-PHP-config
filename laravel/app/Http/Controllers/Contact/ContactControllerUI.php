@@ -59,6 +59,12 @@ class ContactControllerUI extends Controller
         DB::update('UPDATE contact SET firstName=?, lastName=?, email=?, age=?, salary=?, address=? WHERE id=?', [$firstname, $lastname, $email, $age, $salary, $address, $id]);
         // return redirect('https://8000-jeyymsantos-gitpodworksp-08y9fr0dfyt.ws-us38.gitpod.io/addContact')->with('success', 'Data Saved');
         // return redirect('contactForm')->with('success', 'Data Saved');
-        return redirect()->back()->with('success', 'Data Updated');
+        
+        return redirect('https://8000-jeyymsantos-gitpodworksp-08y9fr0dfyt.ws-eu38.gitpod.io/')->with('success', 'Data Updated');
+    }
+
+    public function contactDelete($id){
+        DB::delete('DELETE FROM contact WHERE id = ?', [$id]);
+        return redirect('https://8000-jeyymsantos-gitpodworksp-08y9fr0dfyt.ws-eu38.gitpod.io/')->with('success', 'Data Deleted');
     }
 }
