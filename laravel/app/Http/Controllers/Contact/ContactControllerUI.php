@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Contact;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class ContactControllerUI extends Controller
 {

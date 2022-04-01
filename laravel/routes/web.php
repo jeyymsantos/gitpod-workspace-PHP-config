@@ -20,8 +20,8 @@ Route::get('/', function () {
 // Route for View
 Route::get('/contactview', [ContactControllerUI::class, 'viewform']);
 
-// Route for Getting the Data
-Route::get('/contactview', [ContactControllerUI::class, 'index']);
+// Route for Getting the Data (changed to make it the landing page)
+Route::get('/', [ContactControllerUI::class, 'index']);
 
 // Route for AddContact
 Route::get('/addContact', [ContactControllerUI::class, 'contactform']);
