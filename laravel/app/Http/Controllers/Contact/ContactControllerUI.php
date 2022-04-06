@@ -42,9 +42,11 @@ class ContactControllerUI extends Controller
         $address =      $request->input('address');
 
         DB::insert('INSERT INTO contact(firstName, lastName, email, age, salary, address) VALUES (?,?,?,?,?,?)', [$firstname, $lastname, $email, $age, $salary, $address]);
-        // return redirect('https://8000-jeyymsantos-gitpodworksp-08y9fr0dfyt.ws-us38.gitpod.io/addContact')->with('success', 'Data Saved');
-        // return redirect('contactForm')->with('success', 'Data Saved');
-        return redirect()->back()->with('success', 'Data Saved');
+        //return redirect('https://8000-jeyymsantos-gitpodworksp-08y9fr0dfyt.ws-us38.gitpod.io/')->with('success', 'Data Saved');
+
+        return redirect('https://8000-jeyymsantos-gitpodworksp-08y9fr0dfyt.ws-eu38.gitpod.io/')->with('success', 'Data Saved');
+        //return redirect('contactForm')->with('success', 'Data Saved');
+        //return redirect()->back()->with('success', 'Data Saved');
     }
 
     // Update

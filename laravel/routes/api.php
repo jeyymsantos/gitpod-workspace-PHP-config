@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Contact\ContactControllerAPI;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,16 +20,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Get All Data
-Route::get('contact', 'App\Http\Controllers\Contact\ContactControllerAPI@contact');
+Route::get('contact', [ContactControllerAPI::class, 'contact']);
 
 // Get Data by ID
-Route::get('contact/{id}', 'App\Http\Controllers\Contact\ContactControllerAPI@contactByID');
+Route::get('contact/{id}', [ContactControllerAPI::class, 'contactByID']);
 
 //POST Data
-Route::post('contact', 'App\Http\Controllers\Contact\ContactControllerAPI@contactSave');
+Route::post('contact', [ContactControllerAPI::class, 'contactSave']);
 
 //PUT Data
-Route::put('contact/{contact}', 'App\Http\Controllers\Contact\ContactControllerAPI@contactUpdate');
+Route::put('contact/{contact}', [ContactControllerAPI::class, 'contactUpdate']);
 
 //DELETE Data
-Route::delete('contact/{contact}', 'App\Http\Controllers\Contact\ContactControllerAPI@contactDelete');
+Route::delete('contact/{contact}', [ContactControllerAPI::class, 'contactDelete']);
